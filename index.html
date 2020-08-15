@@ -1,169 +1,343 @@
-<html><head><title>Parval</title><style type="text/css">a {text-decoration: none}</style></head><body  text="000000" link="cadetblue" alink="cadetblue" vlink="darkcyan"  
-leftmargin=10 topmargin=10 marginwidth=10 marginheight=10>
-<div align="left">
-<table border="0"  width="1000" cellspacing="0" cellpadding="1"  >
+<!DOCTYPE html>
+    <head>
+        <style>
+            body
+            {
+                background-color: white;
+                color: black;
+                font-size: 20px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+            }
+            h1
+            {
+                font-size: 50px;
+                font-family: 'Courier New', monospace;
+            }
+            th,td
+            {
+                padding: 15px;
+                text-align: justify;
+            }
+            h2,h3
+            {
+                font-size: 40px;
+            }
+            h4
+            {
+                font-size: 32px;
+                font-weight: normal;
+            }
+            table
+            {
+                border-spacing: 50px;
+            }
 
-<tr><td >
-<table border="0" width="70" cellspacing="0" cellpadding="0">
-<td width = "100%">
-</td> </table> </td>
-<td >
-          <table  height=20> <td width = 100%> </td></table>
+            .blanc
+            {
+            	background-color: white;
+            }
+            .bwblanc
+            {
+            	font-weight: bold;
+            }
+            .tab1
+            {
+                border-spacing: 0px;
+                padding: 0px;
+                text-align: justify;
+                width: 100%;
+            }
+            .txt
+            {
+                font-size: 20px;
+            }
+            .flex1
+            {
+                display: contents;
+                /*display: flex;*/
+                flex-direction: row;
+                /*flex-wrap: wrap;*/
+            }
+            .dtat
+            {
+                font-size: 40px;
+                font-weight: normal;
+                font-family: 'Time-Space';,monospace;
 
-<table  bgcolor="#DBE5F5" cellpadding=5 cellspacing=0 border=0 width="100%">
-<tr><td >
-<font face="Arial" size ="+2" > Parval</font>
-<td>
-<font size="3" face="Trebuchet MS">
-<div align="right">
-<!--[<a href=#pub>Papers</a>  ]-->
-</font>
+            }
+            .cont1
+            {
+                font-size: 60px;
+                font-family: 'Courier New',monospace;
+                font-weight: bold;
+                font-stretch: all;
+                background-color: lightblue;
+                /*position: fixed;*/
+                top: 0;
+                /*z-index: 100;*/
+            }
+            .cont2
+            {
+                font-size: 50px;
+                font-family: 'Courier New',monospace;
+                font-weight: bold;
+                font-stretch: all;
+                background-color: lightblue;
+                border-spacing: 0px;
+                padding: 0px;
+            }
+            .top
+            {
+                /*display: flex;*/
+                border: 0px solid red;
+                padding: 10px;
+                width: 75%;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+                /*box-shadow: 0px 10px 50px rgba(0,0,0,0.7);*/
+                align-items: left;
+                text-align: left;
+                /*position: fixed;*/
+            }
+            .text_1
+            {
+                animation: text1;
+            }
 
-</table>
+            .text_2
+            {
+                animation: text2;
+            }
 
-          <table  height=30> <td width = 100%> </td></table>
+            .text_3
+            {
+                animation: text3;
+            }
 
-<table > 
-<tr> <td width = 20% align = left> 
-		<img src="Web.JPG" width="400" height="350">
-<br>
-<br>
+            .text_4
+            {
+                animation: text4;
+            }
 
+            .text_1, .text_2 , .text_3, .text_4
+            {
+                overflow: hidden;
+                white-space: nowrap;
+                display: inline-block;
+                position: relative;
+                animation-duration: 5s;
+                animation-timing-function: steps(25, end);
+                animation-iteration-count: infinite;
+            }
 
+            .text_1::after, .text_2::after, .text_3::after, .text_4::after
+            {
+                content: "_";
+                position: absolute;
+                right: 0;
+                animation: caret infinite;
+                animation-duration: 0.5s;
+                animation-timing-function: steps(1, end);
+            }
 
+            /*In keyframes, initial percentage markers are for order and next are for actual time allotment.*/
+            /*Eg 0%, 50%, 100% for 2 animations*/
 
-<td> <font size="3" face="Trebuchet MS"> 
+            @keyframes text4
+            {
+                0%, 25%, 50%, 75%, 100%
+                {
+                    width: 0;
+                }
+                80%, 90%
+                {
+                    width: 5.5em;
+                }
+            }
 
+            @keyframes text3
+            {
+                0%, 25%, 50%, 75%, 100%
+                {
+                    width: 0;
+                }
+                60%, 70%
+                {
+                    width: 6.5em;
+                }
+            }
 
-I am a PhD student in the Department of Computer Science at <a href="http://www.cs.princeton.edu">Princeton University</a>. I am extremely fortunate to be advised by  <a href="http://www.cs.princeton.edu/~mbraverm/">Mark Braverman</a>. Before coming here, I finished my undergraduate studies in the Department of Computer Science and Engineering at <a href=http://www.cse.iitd.ac.in>national Institute of Technology, Delhi</a>.   
-<br>
-<br>
-I am interested in Theoretical Computer Science, particularly in Complexity Theory, Algorithmic Fairness and Information Theory.
+            @keyframes text2
+            {
+                0%, 25%, 50%, 75%, 100%
+                {
+                    width: 0;
+                }
+                30%, 40%
+                {
+                    width: 6em;<!---em is a unit for measuring span len, its the char count/2 +1 --->
+                }
+            }
 
-<br>  
-<br>
-<a href=https://www.cs.princeton.edu/~sumeghag/cv.pdf>CV</a> (Last Updated August 2020)
-<br>
-<br>
-PC Member: CRYPTO 2020
-<br>
-<br>
+            @keyframes text1
+            {
+                0%, 25%, 50%, 75%, 100%
+                {
+                    width: 0;
+                }
+                10%, 20%
+                {
+                    width: 3.5em;<!---This is a comment--->
+                }
+            }
 
-<table bgcolor="#DBE5F5" cellpadding=5 cellspacing=0 border=0 width="100%">
-<tr><td align=left> 
-<font face="Arial"  >Contact </font></td>
-</table>
+            @keyframes caret
+            {
+                0%, 100%
+                {
+                    opacity: 0;
+                }
+                25%, 50%, 75%
+                {
+                    opacity: 1;
+                }
+            }
+        </style>
+        <title>Prajval Koul</title>
+        <link rel="icon" type="image/gif" href="https://img.izismile.com/img/img11/20181008/gifs/hot_gifs_that_could_burn_your_monitor_11.gif">
+    </head>
 
-<table BORDER=0 CELLSPACING=0 WIDTH="100%">
+    <!-- <body oncontextmenu="return false;"> Use if you wanna disable right click-->
+    <body>
+        <div id="mast" class="top">
+            <table style="width: 100%" class="tab1">
+                <tr>
+                    <td>
+                        <h2 id="headr" class="cont1">
+                            Prajval Koul
+                        </h2>
+                    </td>
+                </tr>
+            </table>
+            <h1>
+                <span class="text_1">coder</span>
+                <span class="text_2">developer</span>
+                <span class="text_3">programmer</span>
+                <span class="text_4">brainiac</span>
+            </h1>
+        </div>
+        <div id="dv1" class="flex1">
+            <table style="width: 100%">
+                <tr>
+                    <td width="20%">
+                        <img src="picisro.jpg" width="50%">
+                    </td>
+                    <td>
+                        <h2 id="data" class="dtat">
+                            Welcome to my homepage! 
+                            <br>
+                            <br>
+                            <br>
+                            I am a Master's student in the Department of Computer Science and Automation at <a href="http://www.cs.princeton.edu" target="_blank" style="text-decoration: none;">Princeton University</a> under the supervision of professor <a href="http://www.cs.princeton.edu/~mbraverm/" target="_blank" style="text-decoration: none;">Mark Zhandry</a>. Before this, I completed my undergraduate studies in the Department of Computer Science and Engineering at <a href=https://nitdelhi.ac.in/?page_id=11979 target="_blank" style="text-decoration: none;">National Institute of Technology Delhi</a>.   
+                            <br>
+                            <br>
+                            I am interested in Theoretical Computer Science, particularly in complexity theory, algorithmic fairness, information theory and quantum computing.
+                            <br>
+                            <br>
+                            CV [<a href="cv.txt" target="_blank" style="text-decoration: none;">Abridged</a>] [<a href="" target="_blank" style="text-decoration: none;">Unabridged</a>] (Last Updated August 2020)
+                            <p class="cont2">
+                                Contact:
+                            </p>
+                            <p>
+                                Prajval Koul<br>
+                                T69, A Block<br>
+                                IISc Bangalore<br>
+                                KA, 560012.
+                            </p>
+                            <p class="cont2">
+                                Email:
+                            </p>
+                            <p>
+                                prajvalkoul AT iisc DOT ac DOT in<br>
+                                prajvalkoul AT gmail DOT com
+                            </p>
+                        </h2>
+                    </td>
+                    <td width="22%"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- <br> -->
+        <div class="cont2">
+            <table class="tab1">
+                <tr>
+                    <td class="blanc" width="1%"></td>
+                    <td class="bwblanc">Research Papers:</td>
+                    <td class="blanc" width="24.5%"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="txt">
+            <table style="width: 100%">
+                <tr>
+                    <td>
+                        <h3> Optimized Pool Testing for COVID-19 with focus on the Indian Demographic. </h3>
+                        <h4> - Preprint [<a href =https://engrxiv.org/yu2dx/ target="_blank" style="text-decoration: none;">engrXiv</a>] [<a href=https://engrxiv.org/yu2dx/download target="_blank" style="text-decoration: none;">PDF</a>]</h4>
 
-<tr>
+                        <h3> Spectral GUI for Automated Tissue and Lesion Segmentation of T1 Weighted Breast MR Images. </h3>
+                        <h4> - Preprint [<a href =https://arxiv.org/abs/2004.08960 target="_blank" style="text-decoration: none;">arXiv</a>]</h4>
 
-<td VALIGN=TOP COLSPAN="2" >
-Parval,<br>
-35 Olden Street, <br>
-Princeton, NJ - 08540<br>
+                        <h3> Spectrum Loft Method for Fibro-glandular Tissue Segmentation in Pre-contrast Breast MR Images. </h3>
+                        <h4> - with <a href="https://nitdelhi.ac.in/?page_id=13670/?action=profile&id=57" target="_blank" style="text-decoration: none;">Vineeta Kumari</a> and <a href="https://nitdelhi.ac.in/?page_id=13670/?action=profile&id=29" target="_blank" style="text-decoration: none;">Gyanendra Sheoran</a>. <a href="http://www.juit.ac.in/iciip_2017/index.php" target="_blank" style="text-decoration: none;">ICIIP 2017</a> [<a href = https://ieeexplore.ieee.org/abstract/document/8313722 target="_blank" style="text-decoration: none;">IEEE Xplore</a>] [<a href ="" target="_blank" style="text-decoration: none;">PDF</a>]</h4>
 
-
-<br>
-<td ALIGN=RIGHT>&nbsp;<br>&nbsp;<p>&nbsp;</td>
-</tr>
-</table>
-<table>
-<tr>
-     <td align=left>
-
-<table bgcolor="#DBE5F5" cellpadding=5 cellspacing=0 border=0 width="100%">
-<tr><td align=left> 
-<font face="Arial"  >Email </font></td>
-</table>
-
-<FONT face="Arial">
-<FONT face="Arial">
-sumeghag AT cs dot princeton dot edu
-<br>
-<FONT face="Arial">
-
-sumegha dot garg AT gmail dot com </font>
-
-<br>
-</td>
-</table>
-</table>
-
-        
-
-
- <div align = left> 
-
-
-
-          <table  height=30> <td width = 100%> </td></table>
-
-<table bgcolor="#DBE5F5" cellpadding=5 cellspacing=0 border=0 width="100%">
-<tr><td align=left>
-		<font face="Arial" size ="+1" > <a name = pub> Research Papers </font>
-
- <td align = right> 
-
-<font size="3" face="Trebuchet MS">
-</table>
-<h3> Time-Space Tradeoffs for Distinguishing Distributions and Applications to Security of Goldreich's PRG</h3> - with <a href="http://www.cs.cmu.edu/~praveshk/">Pravesh K. Kothari</a> and <a href="http://www.wisdom.weizmann.ac.il/~/ranraz/">Ran Raz</a>. In Submission. [<a href = https://arxiv.org/pdf/2002.07235.pdf>arXiv</a>]
-
-
-<h3> The Role of Randomness and Noise in Strategic Classification </h3> - with <a href="http://www.cs.princeton.edu/~mbraverm/">Mark Braverman</a>. Learning in the Presence of Strategic Behavior (EC 2019 Workshop). FORC 2020. [<a href = https://arxiv.org/pdf/2005.08377.pdf>arXiv</a>]
-
-<h3> Time-Space Lower Bounds for Two-Pass Learning </h3> - with <a href="http://www.wisdom.weizmann.ac.il/~/ranraz/">Ran Raz</a> and <a href="http://www.avishaytal.org/">Avishay Tal</a>. CCC 2019. [<a href = https://eccc.weizmann.ac.il/report/2019/071/>ECCC</a>]
-<h3> Tracking and Improving Information in the Service of Fairness </h3> - with <a href="https://cs.stanford.edu/~mpkim/">Michael Kim</a> and <a href="https://omereingold.wordpress.com/">Omer Reingold</a>. EC 2019. [<a href = https://arxiv.org/pdf/1904.09942.pdf>arXiv</a>]
-
-<h3> The Space Complexity of Mirror Games </h3> - with <a href="https://jschnei.github.io/">Jon Schneider</a>. ITCS 2019. [<a href = https://arxiv.org/pdf/1710.02898.pdf>arXiv</a>]
-
-<h3> Pseudorandom Pseudo-Distributions with Near-Optimal Error for Read-Once Branching Programs </h3> - with <a href="http://www.cs.princeton.edu/~mbraverm/">Mark Braverman</a> and <a href="https://www.gilcohen.org/">Gil Cohen</a>. STOC 2018. <font color="indianred">Invited to the SICOMP Special Issue for STOC 2018 </font>[<a href = https://eccc.weizmann.ac.il/report/2017/161/>ECCC</a>]
-
-<h3> Extractor-Based Time-Space Lower Bounds for Learning </h3> - with <a href="http://www.wisdom.weizmann.ac.il/~/ranraz/">Ran Raz</a> and <a href="http://www.avishaytal.org/">Avishay Tal</a>. STOC 2018. [<a href = https://eccc.weizmann.ac.il/report/2017/121/>ECCC</a>]
-
-<h3> Network Coding in Undirected Graphs is Either Very Helpful or Not Helpful at All </h3> - with <a href="http://www.cs.princeton.edu/~mbraverm/">Mark Braverman</a> and <a href="https://sites.google.com/site/schvartzmanariel/home">Ariel Schvartzman</a>. ITCS 2017. <font color="indianred"> Invited paper </font> [<a href = https://arxiv.org/pdf/1608.06545.pdf>arXiv</a>]
-
-<h3> New Security Notions and Feasibility Results for Authentication of Quantum Data </h3> - with <a href="http://www.henryyuen.net/">Henry Yuen</a> and <a href="https://www.cs.princeton.edu/~mzhandry/">Mark Zhandry</a>. QCrypt 2016. Crypto 2017. [<a href = https://arxiv.org/pdf/1607.07759.pdf>arXiv</a>]
-
-
-
-<table  height=30> <td width = 100%> </td></table>
-
-<table bgcolor="#DBE5F5" cellpadding=5 cellspacing=0 border=0 width="100%">
-<tr><td align=left>
-                <font face="Arial" size ="+1" > <a name = pub> Teaching </font>
-
- <td align = right>
-
-<font size="3" face="Trebuchet MS">
-</table>
-
-      <h3>Princeton University</h3>
-
-          <ul>
-            
-            <li><p>Spring 2017: Teaching Assistant for 
-            <a href="http://www.cs.princeton.edu/courses/archive/spr17/cos522/">
-    COS 522: Computational Complexity</a></p></li>
-    <li><p>Spring 2017: Teaching Assistant for 
-            <font color="cadetblue">CS IW 05: Developing a Technology Startup Venture</font></p></li>
-            <li><p>Fall 2016: Teaching Assistant for 
-            <a href="http://www.cs.princeton.edu/courses/archive/fall16/cos487/">
-		COS 487: Theory of Computation</a></p></li>
-    
-          </ul>
-
-        <h3>IIT Delhi</h3>
-
-          <ul>
-            <li><p>Spring 2015: Teaching Assistant for 
-	    <a href="http://www.cse.iitd.ernet.in/~naveen/courses/CSL201/index.html">
-		COL106/CSL201: Data Structures</a></p>
-	    </li>
-
-             
-          </ul>
-
-</body>
+                        <h3> Gamma Gaussian Mixture Modeling for Fibroglandular Tissue Segmentation in MR Images. </h3>
+                        <h4> - with <a href="https://nitdelhi.ac.in/?page_id=13670/?action=profile&id=57" target="_blank" style="text-decoration: none;">Vineeta Kumari</a>, <a href="https://nitdelhi.ac.in/?page_id=13670/?action=profile&id=29" target="_blank" style="text-decoration: none;">Gyanendra Sheoran</a> and <a href="https://nitdelhi.ac.in/?page_id=13670/?action=profile&id=10" target="_blank" style="text-decoration: none;">Tirupatiraju Kanumuri</a>. <a href="https://site.ieee.org/indiacouncil/event/ieee-indicon-2017/" target="_blank" style="text-decoration: none;">INDICON 2017</a> [<a href = https://ieeexplore.ieee.org/abstract/document/8487549 target="_blank" style="text-decoration: none;">IEEE Xplore</a>] [<a href="" target="_blank">PDF</a>]</h4>
+                    </td>
+                    <td class="blanc" width="24%"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="cont2">
+            <table class="tab1">
+                <tr>
+                    <td class="blanc" width="1%"></td>
+                    <td class="bwblanc">Teaching:</td>
+                    <td class="blanc" width="24%"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="txt">
+            <table style="width: 100%">
+                <tr>
+                    <td>
+                        <h3>Indian Institute of Science</h3>
+                        <ul>
+                            <li>
+                                <h4>Fall 2020: Teaching Assistant for <a href="http://lcm.csa.iisc.ernet.in/gametheory/index.html" target="_blank" style="text-decoration: none;">Cryptography</a></h4>
+                            </li>
+                        </ul>
+                        <h3>NIT Delhi</h3>
+                        <ul>
+                            <li>
+                                <h4>Fall 2018: Teaching Assistant for <font color="indianred"> PHL 100: Electromagnetics and Quantum Physics</font></h4>
+                            </li>
+                            <li>
+                                <h4>Spring 2018: Teaching Assistant for <font color="cadetblue">CSB 102: Data Structures</font></a></h4>
+                            </li>
+                            <li>
+                                <h4>Fall 2017: Teaching Assistant for <font color="nilered"> CSB 102: Data Structures</font></h4>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="blanc" width="24%"></td>
+                </tr>
+            </table>
+        </div>
+        <a href="https://info.flagcounter.com/NOPQ"><img src="https://s01.flagcounter.com/countxl/NOPQ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_100/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+    </body>
 </html>
-
